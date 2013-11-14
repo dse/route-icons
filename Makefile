@@ -1,7 +1,7 @@
-WHITE_ON_BLACK_SVG_ROUTE_ICONS  = $(shell seq 1 99 | sed -r 's:(.*):target/route-icons/svg/white-on-black/\1.svg:g')
-BLACK_ON_YELLOW_SVG_ROUTE_ICONS = $(shell seq 1 99 | sed -r 's:(.*):target/route-icons/svg/black-on-yellow/\1.svg:g')
-WHITE_ON_BLACK_PNG_ROUTE_ICONS  = $(shell seq 1 99 | sed -r 's:(.*):target/route-icons/png/white-on-black/\1.png:g')
-BLACK_ON_YELLOW_PNG_ROUTE_ICONS = $(shell seq 1 99 | sed -r 's:(.*):target/route-icons/png/black-on-yellow/\1.png:g')
+WHITE_ON_BLACK_SVG_ROUTE_ICONS  = $(shell (seq 0 99; echo 00; echo XX) | sed -r 's:(.*):target/route-icons/svg/white-on-black/\1.svg:g')
+BLACK_ON_YELLOW_SVG_ROUTE_ICONS = $(shell (seq 0 99; echo 00; echo XX) | sed -r 's:(.*):target/route-icons/svg/black-on-yellow/\1.svg:g')
+WHITE_ON_BLACK_PNG_ROUTE_ICONS  = $(shell (seq 0 99; echo 00; echo XX) | sed -r 's:(.*):target/route-icons/png/white-on-black/\1.png:g')
+BLACK_ON_YELLOW_PNG_ROUTE_ICONS = $(shell (seq 0 99; echo 00; echo XX) | sed -r 's:(.*):target/route-icons/png/black-on-yellow/\1.png:g')
 
 OTHER_PREREQUISITES = dirs Makefile
 
