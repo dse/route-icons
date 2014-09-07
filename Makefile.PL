@@ -2,7 +2,7 @@
 use warnings;
 use strict;
 
-my $makefile = "Makefile.1";
+my $makefile = "Makefile";
 open(STDOUT, ">", "$makefile") or die("Cannot write $makefile: $!\n");
 
 my @schemes = ({ foreground => "white", background => "black" },
