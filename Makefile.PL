@@ -6,12 +6,16 @@ my $makefile = "Makefile";
 open(STDOUT, ">", "$makefile") or die("Cannot write $makefile: $!\n");
 
 my @schemes = (
-    { foreground => "white", background => "black",  fg_hex => "#ffffff", bg_hex => "#000000", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
-    { foreground => "white", background => "blue",   fg_hex => "#ffffff", bg_hex => "#0000ff", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
-    { foreground => "white", background => "red",    fg_hex => "#ffffff", bg_hex => "#ff0000", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
-    { foreground => "black", background => "yellow", fg_hex => "#000000", bg_hex => "#ffff00", font_weight => "normal", font_family =>  "Helvetica,Swis721 BT"     , stroke_hex => "#000000" },
-    { foreground => "blue",  background => "white",  fg_hex => "#0000ff", bg_hex => "#ffffff", font_weight => "normal", font_family =>  "Helvetica,Swis721 BT"     , stroke_hex => "#0000ff" },
-    { foreground => "white", background => "orange", fg_hex => "#ffffff", bg_hex => "#ff9900", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold", stroke_hex => "#000000" },
+    { foreground => "white",  background => "black",  fg_hex => "#ffffff", bg_hex => "#000000", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
+    { foreground => "white",  background => "orange", fg_hex => "#ffffff", bg_hex => "#ed8000", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
+    { foreground => "white",  background => "pink",   fg_hex => "#ffffff", bg_hex => "#ff6666", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
+    { foreground => "yellow", background => "black",  fg_hex => "#ffff00", bg_hex => "#000000", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
+    { foreground => "blue",   background => "black",  fg_hex => "#9999ff", bg_hex => "#000000", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
+    { foreground => "white",  background => "blue",   fg_hex => "#ffffff", bg_hex => "#0000ff", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
+    { foreground => "white",  background => "red",    fg_hex => "#ffffff", bg_hex => "#ff0000", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
+    { foreground => "black",  background => "yellow", fg_hex => "#000000", bg_hex => "#ffff00", font_weight => "normal", font_family =>  "Helvetica,Swis721 BT"     , stroke_hex => "#000000" },
+    { foreground => "blue",   background => "white",  fg_hex => "#0000ff", bg_hex => "#ffffff", font_weight => "normal", font_family =>  "Helvetica,Swis721 BT"     , stroke_hex => "#0000ff" },
+    { foreground => "red",    background => "white",  fg_hex => "#ff0000", bg_hex => "#ffffff", font_weight => "normal", font_family =>  "Helvetica,Swis721 BT"     , stroke_hex => "#0000ff" },
    );
 
 foreach my $scheme (@schemes) {
