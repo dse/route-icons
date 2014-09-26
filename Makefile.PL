@@ -6,12 +6,12 @@ my $makefile = "Makefile";
 open(STDOUT, ">", "$makefile") or die("Cannot write $makefile: $!\n");
 
 my @schemes = (
-    { foreground => "white", background => "black",  fg_hex => "#ffffff", bg_hex => "#000000", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold" },
-    { foreground => "white", background => "blue",   fg_hex => "#ffffff", bg_hex => "#0000ff", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold" },
-    { foreground => "white", background => "red",    fg_hex => "#ffffff", bg_hex => "#ff0000", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold" },
-    { foreground => "black", background => "yellow", fg_hex => "#000000", bg_hex => "#ffff00", font_weight => "normal", font_family =>  "Helvetica,Swis721 BT"      },
-    { foreground => "blue",  background => "white",  fg_hex => "#0000ff", bg_hex => "#ffffff", font_weight => "normal", font_family =>  "Helvetica,Swis721 BT"      },
-    { foreground => "white", background => "orange", fg_hex => "#ffffff", bg_hex => "#ff9900", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold" },
+    { foreground => "white", background => "black",  fg_hex => "#ffffff", bg_hex => "#000000", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
+    { foreground => "white", background => "blue",   fg_hex => "#ffffff", bg_hex => "#0000ff", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
+    { foreground => "white", background => "red",    fg_hex => "#ffffff", bg_hex => "#ff0000", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
+    { foreground => "black", background => "yellow", fg_hex => "#000000", bg_hex => "#ffff00", font_weight => "normal", font_family =>  "Helvetica,Swis721 BT"     , stroke_hex => "#000000" },
+    { foreground => "blue",  background => "white",  fg_hex => "#0000ff", bg_hex => "#ffffff", font_weight => "normal", font_family =>  "Helvetica,Swis721 BT"     , stroke_hex => "#0000ff" },
+    { foreground => "white", background => "orange", fg_hex => "#ffffff", bg_hex => "#ff9900", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold", stroke_hex => "#000000" },
    );
 
 foreach my $scheme (@schemes) {
@@ -94,6 +94,14 @@ foreach my $scheme (@schemes) {
     my $fh;
     my $filename = "src/$scheme->{basename}.svg";
     open($fh, ">", $filename) or die("Cannot write $filename: $!\n");
+
+    my $stroke;
+    if ($scheme->{stroke_hex}) {
+	$stroke = "stroke:$scheme->{stroke_hex};stroke-opacity:1;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none";
+    } else {
+	$stroke = "stroke:none";
+    }
+
     print $fh <<"END";
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
@@ -113,7 +121,7 @@ foreach my $scheme (@schemes) {
     </rdf:RDF>
   </metadata>
   <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(0,-1037.3622)">
-    <path sodipodi:type="arc" style="fill:$scheme->{bg_hex};fill-opacity:1;stroke:none" id="path2987" sodipodi:cx="7.5" sodipodi:cy="7.5" sodipodi:rx="7.5" sodipodi:ry="7.5" d="m 15,7.5 a 7.5,7.5 0 1 1 -15,0 7.5,7.5 0 1 1 15,0 z" transform="translate(0,1037.3622)" />
+    <path sodipodi:type="arc" style="fill:$scheme->{bg_hex};fill-opacity:1;${stroke}" id="path2987" sodipodi:cx="7.5" sodipodi:cy="7.5" sodipodi:rx="7.5" sodipodi:ry="7.5" d="m 15,7.5 a 7.5,7.5 0 1 1 -15,0 7.5,7.5 0 1 1 15,0 z" transform="translate(0,1037.3622)" />
     <text xml:space="preserve" style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:$scheme->{bg_hex};fill-opacity:1;stroke:none;font-family:Helvetica,Swis721 Hv BT;-inkscape-font-specification:Helvetica,Swis721 Hv BT" x="7.4973145" y="1048.6031" id="text3757" sodipodi:linespacing="125%"><tspan sodipodi:role="line" id="tspan3759" x="7.4973145" y="1048.6031" style="font-size:11px;font-style:normal;font-variant:normal;font-weight:$scheme->{font_weight};font-stretch:normal;fill:$scheme->{fg_hex};fill-opacity:1;font-family:Helvetica,Swis721 BT;-inkscape-font-specification:$scheme->{font_family}">{ROUTE_NUMBER}</tspan></text>
     <text xml:space="preserve" style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:$scheme->{bg_hex};fill-opacity:1;stroke:none;font-family:Helvetica,Arial;-inkscape-font-specification:Arial" x="25.625" y="23.1875" id="text3767" sodipodi:linespacing="125%" transform="translate(0,1037.3622)"><tspan sodipodi:role="line" id="tspan3769" x="25.625" y="23.1875" /></text>
   </g>
@@ -121,3 +129,6 @@ foreach my $scheme (@schemes) {
 END
     close($fh);
 }
+
+# fill:#ffffff;fill-opacity:1;stroke:none
+# fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-opacity:1;stroke-width:1.2;stroke-miterlimit:4;stroke-dasharray:none
