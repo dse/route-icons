@@ -10,7 +10,7 @@ my @schemes = (
     { foreground => "white",  background => "orange", fg_hex => "#ffffff", bg_hex => "#ed8000", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
     { foreground => "white",  background => "pink",   fg_hex => "#ffffff", bg_hex => "#ff6666", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
     { foreground => "yellow", background => "black",  fg_hex => "#ffff00", bg_hex => "#000000", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
-    { foreground => "blue",   background => "black",  fg_hex => "#9999ff", bg_hex => "#000000", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
+    { foreground => "blue",   background => "black",  fg_hex => "#ddddff", bg_hex => "#000000", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
     { foreground => "white",  background => "blue",   fg_hex => "#ffffff", bg_hex => "#0000ff", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
     { foreground => "white",  background => "red",    fg_hex => "#ffffff", bg_hex => "#ff0000", font_weight => "bold"  , font_family =>  "Helvetica,Swis721 BT Bold",                         },
     { foreground => "black",  background => "yellow", fg_hex => "#000000", bg_hex => "#ffff00", font_weight => "normal", font_family =>  "Helvetica,Swis721 BT"     , stroke_hex => "#000000" },
