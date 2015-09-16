@@ -161,83 +161,83 @@ dirs:
 -include ~/lib/make/common.mk
 
 $(WHITE_ON_BLACK_SVG_2DIGIT_ROUTE_ICONS): target/route-icons/svg/white-on-black/%.svg: src/2-digit/white-on-black.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(WHITE_ON_ORANGE_SVG_2DIGIT_ROUTE_ICONS): target/route-icons/svg/white-on-orange/%.svg: src/2-digit/white-on-orange.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(WHITE_ON_PINK_SVG_2DIGIT_ROUTE_ICONS): target/route-icons/svg/white-on-pink/%.svg: src/2-digit/white-on-pink.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(YELLOW_ON_BLACK_SVG_2DIGIT_ROUTE_ICONS): target/route-icons/svg/yellow-on-black/%.svg: src/2-digit/yellow-on-black.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(BLUE_ON_BLACK_SVG_2DIGIT_ROUTE_ICONS): target/route-icons/svg/blue-on-black/%.svg: src/2-digit/blue-on-black.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(WHITE_ON_BLUE_SVG_2DIGIT_ROUTE_ICONS): target/route-icons/svg/white-on-blue/%.svg: src/2-digit/white-on-blue.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(WHITE_ON_RED_SVG_2DIGIT_ROUTE_ICONS): target/route-icons/svg/white-on-red/%.svg: src/2-digit/white-on-red.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(BLACK_ON_YELLOW_SVG_2DIGIT_ROUTE_ICONS): target/route-icons/svg/black-on-yellow/%.svg: src/2-digit/black-on-yellow.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(BLUE_ON_WHITE_SVG_2DIGIT_ROUTE_ICONS): target/route-icons/svg/blue-on-white/%.svg: src/2-digit/blue-on-white.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(RED_ON_WHITE_SVG_2DIGIT_ROUTE_ICONS): target/route-icons/svg/red-on-white/%.svg: src/2-digit/red-on-white.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(WHITE_ON_BLACK_SVG_3DIGIT_ROUTE_ICONS): target/route-icons/svg/white-on-black/%.svg: src/3-digit/white-on-black.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(WHITE_ON_ORANGE_SVG_3DIGIT_ROUTE_ICONS): target/route-icons/svg/white-on-orange/%.svg: src/3-digit/white-on-orange.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(WHITE_ON_PINK_SVG_3DIGIT_ROUTE_ICONS): target/route-icons/svg/white-on-pink/%.svg: src/3-digit/white-on-pink.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(YELLOW_ON_BLACK_SVG_3DIGIT_ROUTE_ICONS): target/route-icons/svg/yellow-on-black/%.svg: src/3-digit/yellow-on-black.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(BLUE_ON_BLACK_SVG_3DIGIT_ROUTE_ICONS): target/route-icons/svg/blue-on-black/%.svg: src/3-digit/blue-on-black.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(WHITE_ON_BLUE_SVG_3DIGIT_ROUTE_ICONS): target/route-icons/svg/white-on-blue/%.svg: src/3-digit/white-on-blue.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(WHITE_ON_RED_SVG_3DIGIT_ROUTE_ICONS): target/route-icons/svg/white-on-red/%.svg: src/3-digit/white-on-red.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(BLACK_ON_YELLOW_SVG_3DIGIT_ROUTE_ICONS): target/route-icons/svg/black-on-yellow/%.svg: src/3-digit/black-on-yellow.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(BLUE_ON_WHITE_SVG_3DIGIT_ROUTE_ICONS): target/route-icons/svg/blue-on-white/%.svg: src/3-digit/blue-on-white.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 $(RED_ON_WHITE_SVG_3DIGIT_ROUTE_ICONS): target/route-icons/svg/red-on-white/%.svg: src/3-digit/red-on-white.svg $(OTHER_PREREQUISITES)
-	sed 's:{ROUTE_NUMBER}:$*:g' < $< > $@.tmp
+	sed 's:{RN}:$*:g' < $< > $@.tmp
 	$(MV) $@.tmp $@
 
 target/route-icons/png/white-on-black/%.png: target/route-icons/svg/white-on-black/%.svg $(OTHER_PREREQUISITES)
